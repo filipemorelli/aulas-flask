@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Estudante</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<h1 style="text-align:center;">Editar {{ estudante.nome }}</h1>
+<form action="/edit/{{ estudante.id }}" class="container" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" name="nome" id="nome" placeholder="nome" class="form-control"
+                   value="{{ estudante.nome }}">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="idade" id="idade" placeholder="idade" class="form-control"
+                   value="{{ estudante.idade }}">
+        </div>
+    </div>
+    <br>
+    <div class="row col-xs-12">
+        <button type="submit" class="btn btn-block btn-success">Enviar</button>
+    </div>
+</form>
+</body>
+</html>
